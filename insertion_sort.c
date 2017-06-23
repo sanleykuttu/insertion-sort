@@ -1,21 +1,21 @@
 #include<stdio.h>
 
-void ins(int arr[],int n)
+void ins(int a[],int n)
 {
   int i,j,key;
    for (i = 1; i < n; i++)
    {
-       key = arr[i];
+       key = a[i];
        j = i-1;
-       while (j >= 0 && arr[j] > key)
+       while (j >= 0 && a[j] > key)
        {
-           arr[j+1] = arr[j];
+           a[j+1] = a[j];
            j = j-1;
        }
-       arr[j+1] = key;
+       a[j+1] = key;
    }
     for (i=0; i < n; i++)
-       printf("%d ", arr[i]);
+       printf("%d ", a[i]);
    printf("\n");
 }
   void main()
