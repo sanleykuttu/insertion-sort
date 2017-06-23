@@ -1,16 +1,9 @@
 #include<stdio.h>
 
-void main()
+void ins(int arr[],int n)
 {
-  int arr[10],i,j,key,n;
-  printf("\nEnter the size:");
-  scanf("%d",&n);
-  printf("\nEnter the array:");
-  for(i=0;i<n;++i)
-    {
-      scanf("%d",&arr[i]);
-    }
-    for (i = 1; i < n; i++)
+  int i,j,key;
+   for (i = 1; i < n; i++)
    {
        key = arr[i];
        j = i-1;
@@ -25,6 +18,18 @@ void main()
        printf("%d ", arr[i]);
    printf("\n");
 }
+  void main()
+{
+  int arr[10],i,j,key,n;
+  printf("\nEnter the size:");
+  scanf("%d",&n);
+  printf("\nEnter the array:");
+  for(i=0;i<n;++i)
+    {
+      scanf("%d",&arr[i]);
+    }
+  ins(arr,n);
+}  
 
 
 
